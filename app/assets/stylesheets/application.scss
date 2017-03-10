@@ -1,0 +1,337 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "variables";
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  background: white;
+  color: $grey;
+  font-size: 12px;
+  height: 100%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $red;
+
+  img {
+    width: 43px;
+    height: 43px;
+    padding: 5px;
+    margin-left: 20%;
+  }
+}
+
+nav {
+  width: 900px;
+  background-color: $red;
+  padding: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  ul {
+    display: flex;
+    justify-content: flex-end;
+
+    li {
+      a {
+        background-color: white;
+        border-radius: 4px;
+        color: $grey;
+        font-weight: 700;
+        display: block;
+        padding: 15px;
+        text-decoration: none;
+        text-transform: uppercase;
+        cursor: pointer;
+        z-index: 1;
+        position: relative;
+        -webkit-transition: box-shadow 0.1s ease-out, background-color 0.1s ease-in-out;
+        -moz-transition: box-shadow 0.1s ease-out, background-color 0.1s ease-in-out;
+        -ms-transition: box-shadow 0.1s ease-out, background-color 0.1s ease-in-out;
+        -o-transition: box-shadow 0.1s ease-out, background-color 0.1s ease-in-out;
+        transition: box-shadow 0.1s ease-out, background-color 0.1s ease-in-out;
+
+        &:hover {
+          color: $light-grey;
+          -webkit-box-shadow: 0px 2px 2px 1px rgba(0,0,0,0.75);
+          -moz-box-shadow: 0px 2px 2px 1px rgba(0,0,0,0.75);
+          box-shadow: 0px 2px 2px 1px rgba(0,0,0,0.75);
+        }
+
+        &:active {
+          background-color: $light-grey;
+          color: white;
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}
+
+#root {
+  height: 100%;
+  padding-top: 20px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 36px;
+  text-align: center;
+  color: $black;
+  margin-bottom: 0;
+  font-weight: normal;
+}
+
+.small-image {
+  height: 20px;
+  width: auto;
+  // background-color: rgb(240, 240, 240);
+}
+
+.pokemon-display {
+  display: flex;
+  // background-color: pink;
+}
+.pokemon-index {
+  width:20%;
+  overflow-y: scroll;
+  height:85vh;
+  padding-right: 10px;
+  // background-color: cornflowerblue;
+}
+
+.pokemon-index ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+.pokemon-index li {
+  display: flex;
+  // background-color: green;
+  padding: 5px;
+  margin: 0;
+  border-top: 1px solid black;
+  list-style: none;
+  vertical-align: middle;
+  position: relative;
+}
+
+.pokemon-index li:nth-of-type(even){
+  background-color: $light-grey;
+}
+
+
+.pokemon-index li:hover {
+  background-color: $grey;
+  cursor: pointer;
+}
+
+.pokemon-index li:last-of-type {
+  border-bottom: 1px solid black;
+}
+
+.pokemon-index li a {
+  text-decoration: none;
+  color: black;
+  display: table;
+  width: 100%;
+}
+
+.pokemon-index span {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.pokemon-id {
+  width: 25px;
+}
+
+.pokemon-img {
+  width: 20px;
+}
+
+.pokemon-name {
+  width: auto;
+}
+
+.pokemon-detail, .new-pokemon-div {
+  background-color: $light-grey;
+  border: 5px solid black;
+  border-radius: 15px;
+  margin: 5px 30px;
+  width: 75%;
+  height: 85vh;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+.large-image-div {
+  // background-color: gold;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 30px;
+  border: 3px solid black;
+  border-radius: 10px;
+
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, yellow, red); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, yellow, red); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, yellow, red); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, yellow, red); /* Standard syntax */
+}
+
+.large-image {
+  height: 35vh;
+  // background-color: cornflowerblue;
+}
+
+.pokemon-detail-stats {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pokemon-detail-list {
+  list-style: none;
+  color: black;
+  padding-left: 0;
+  font-size: 20px;
+  text-align: center;
+}
+
+.pokemon-detail-list li {
+  padding-bottom: 10px;
+}
+.items-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  border: 3px solid black;
+  border-radius: 10px;
+  padding-left: 0px;
+  background-color: white;
+}
+.item-image {
+  height: 120px;
+  margin: 10px;
+  padding: 10px;
+  filter: brightness(0.5);
+}
+
+.item-image:hover {
+  box-shadow: 1px 1px 3px 3px #888888;
+  border: none;
+  border-radius: 5px;
+  filter: brightness(1);
+  transform: scale3d(1.1, 1.1, 1);
+}
+
+.items-detail {
+  width: 50%;
+  margin: 0 auto;
+  background-color: rgb(240, 255, 240);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 10px;
+  padding-top: 20px;
+  border: 3px solid black;
+  border-radius: 10px;
+  background-image:radial-gradient(circle at 100% 150%, #F6F6F6 24%, #fff 25%, #fff 28%, #F6F6F6 29%, #F6F6F6 36%, #fff 36%, #fff 40%, transparent 40%, transparent),
+  radial-gradient(circle at 0 150%, #F6F6F6 24%, #fff 25%, #fff 28%, #F6F6F6 29%, #F6F6F6 36%, #fff 36%, #fff 40%, transparent 40%, transparent),
+  radial-gradient(circle at 50% 100%, #fff 10%, #F6F6F6 11%, #F6F6F6 23%, #fff 24%, #fff 30%, #F6F6F6 31%, #F6F6F6 43%, #fff 44%, #fff 50%, #F6F6F6 51%, #F6F6F6 63%, #fff 64%, #fff 71%, transparent 71%, transparent),
+  radial-gradient(circle at 100% 50%, #fff 5%, #F6F6F6 6%, #F6F6F6 15%, #fff 16%, #fff 20%, #F6F6F6 21%, #F6F6F6 30%, #fff 31%, #fff 35%, #F6F6F6 36%, #F6F6F6 45%, #fff 46%, #fff 49%, transparent 50%, transparent),
+  radial-gradient(circle at 0 50%, #fff 5%, #F6F6F6 6%, #F6F6F6 15%, #fff 16%, #fff 20%, #F6F6F6 21%, #F6F6F6 30%, #fff 31%, #fff 35%, #F6F6F6 36%, #F6F6F6 45%, #fff 46%, #fff 49%, transparent 50%, transparent);
+  background-size:100px 50px;
+}
+.items-detail > span {
+  font-size: 28px;
+  color: black;
+}
+
+.items-detail ul {
+  list-style: none;
+  text-align: center;
+  padding-left: 0;
+}
+.item-detail-list {
+  font-size: 20px;
+  color: black;
+
+}
+.item-detail-list li{
+  margin-bottom: 20px;
+}
+.item-detail-list li:first-of-type{
+  font-size: 26px;
+}
+
+.create-pokemon-button-div {
+  margin-right: 20%;
+  display: flex;
+  align-items: center;
+  height: auto;
+}
+.create-pokemon-button {
+  background-color: white;
+  line-height: 30px;
+  color: $grey;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 10px;
+  padding: 5px 10px;
+  text-align: center;
+  border-radius: 5px;
+
+}
+.create-pokemon-button:hover{
+  box-shadow: 0 0 2px 2px;
+  color: black;
+}
